@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Snippet Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Code Snippet Manager</h1>
+    <div id="snippetForm">
+        <h2>Submit a Code Snippet</h2>
+        <form id="submitForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="language">Preferred Language:</label>
+            <select id="language" name="language" required>
+                <option value="C++">C++</option>
+                <option value="Java">Java</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+            </select>
+            <label for="stdin">Standard Input:</label>
+            <textarea id="stdin" name="stdin" required></textarea>
+            <label for="code">Source Code:</label>
+            <textarea id="code" name="code" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div id="snippetList">
+        <h2>Submitted Code Snippets</h2>
+        <table id="snippetTable">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Language</th>
+                    <th>Stdin</th>
+                    <th>Code Preview</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody id="snippetBody">
+                <!-- Snippet list will be populated here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
